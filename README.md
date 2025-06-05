@@ -27,6 +27,10 @@ Try it locally by opening `index.html` in your browser.
 > ![Todo list 1](https://github.com/user-attachments/assets/ef20e19c-403d-4fca-a5ac-cedd9b54e992)
 > ![Todo list 2](https://github.com/user-attachments/assets/944a60b9-e6d2-4799-b6ef-fe4f7d9ade70)
 > ![Todo list 3](https://github.com/user-attachments/assets/b913315f-8dba-4911-92a8-10e03e7c5f32)
+> ![Screenshot 2025-06-05 190855](https://github.com/user-attachments/assets/66f457a1-ec1e-4f87-b1e8-be8ac04c352a)
+> ![Screenshot 2025-06-05 190948](https://github.com/user-attachments/assets/a5ef0a40-8561-42f5-b9dd-00c5d79b4674)
+
+
 
 
 
