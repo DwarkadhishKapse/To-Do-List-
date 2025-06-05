@@ -14,6 +14,8 @@ Try it locally by opening `index.html` in your browser.
 - ❌ Delete tasks from the list and `localStorage`
 - 💾 Save tasks to `localStorage` (even after page reload)
 - ♻️ Automatically loads all saved tasks on page load
+- 🌗 Dark Mode Toggle Feature
+   This project includes a Dark Mode / Light Mode toggle to enhance user experience and accessibility. A toggle button in the top-right corner lets users switch       between themes. The selected mode is saved using localStorage, so your preferred theme persists even after refreshing or reopening the browser.
 
 ## 💻 Technologies Used
 
