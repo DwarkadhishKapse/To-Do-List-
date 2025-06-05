@@ -2,6 +2,39 @@ const taskInput = document.getElementById("taskInput");
 const addTaskButton = document.getElementById("addTaskButton");
 const taskList = document.getElementById("taskList");
 
+const toggleBtn = document.getElementById('modeToggle');
+toggleBtn.addEventListener('click', function(){
+  document.body.classList.toggle("dark-mode");
+
+  //* Save mode in localStorage
+  if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("mode", "dark")
+    toggleBtn.textContent = "🌚";
+    toggleBtn.style.backgroundColor = "#333"; // dark background
+    toggleBtn.style.color = "#fff";
+  }else{
+    localStorage.setItem("mode", "light");
+    toggleBtn.textContent = "🌝";
+    toggleBtn.style.backgroundColor = ""; // reset to default
+    toggleBtn.style.color = "";
+  }
+});
+
+//* onpage load apply save mode
+window.addEventListener("DOMContentLoaded", () => {
+  const savedMode = localStorage.getItem("mode");
+  if(savedMode == "dark"){
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "🌚";
+    toggleBtn.style.backgroundColor = "#333";
+    toggleBtn.style.color = "#fff";
+  }else{
+    toggleBtn.textContent = "🌝";
+    toggleBtn.style.backgroundColor = "";
+    toggleBtn.style.color = "";
+  }
+});
+
 addTaskButton.addEventListener("click", function () {
   const taskText = taskInput.value.trim();
 
