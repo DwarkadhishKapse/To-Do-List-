@@ -4,35 +4,153 @@
     padding: 0;
 }
 
+/*! Dark mode Operation */
+
+:root {
+    --bg-color: #b8dcff;
+    --text-color: #212121;
+    --header-bg: #f8f8f8;
+    --header-title-bg: #84e9ff;
+    --main-bg: #0d5bc7;
+    --main-hover-bg: #0753aa;
+    --task-bg: #fff;
+    --task-text: #2f2f2f;
+    --input-border: #ccc;
+    --placeholder-color: #686868;
+    --edit-bg: #f0f0f0;
+    --edit-hover: #dbdbdb;
+    --save-bg: #00ac14;
+    --save-hover: #008f11;
+    --delete-bg: #f62c2c;
+    --delete-hover: #d11a1a;
+}
+
+body.dark-mode {
+    --bg-color: #181c24;
+    --text-color: #e0e6ed;
+    --header-bg: #232a36;
+    --header-title-bg: #22304a;
+    --main-bg: #232a36;
+    --main-hover-bg: #1a202a;
+    --task-bg: #232a36;
+    --task-text: #e0e6ed;
+    --input-border: #3a4252;
+    --placeholder-color: #7a8699;
+    --edit-bg: #2a3240;
+    --edit-hover: #3a4252;
+    --save-bg: #1e8c3a;
+    --save-hover: #176c2d;
+    --delete-bg: #c0392b;
+    --delete-hover: #922b1e;
+}
+
+body.dark-mode header,
+body.dark-mode .main-content {
+    background-color: var(--main-bg);
+    color: var(--text-color);
+}
+
+body.dark-mode header #p1 {
+    background-color: var(--header-title-bg);
+    color: var(--text-color);
+}
+
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg);
+}
+
+header #p1 {
+    background-color: var(--header-title-bg);
+    color: var(--text-color);
+}
+
+.main-content {
+    background-color: var(--main-bg);
+}
+
+.main-content:hover {
+    background-color: var(--main-hover-bg);
+}
+
+header #p2 {
+    color: var(--text-color);
+}
+
+.edit-btn {
+    background-color: var(--edit-bg);
+}
+
+.edit-btn:hover {
+    background-color: var(--edit-hover);
+}
+
+.save-btn {
+    background-color: var(--save-bg);
+}
+
+.save-btn:hover {
+    background-color: var(--save-hover);
+}
+
+.delete-btn {
+    background-color: var(--delete-bg);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-hover);
+}
+
+#modeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/*! End */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #d0e7ff;
+    background-color: var(--bg-color);
     color: #333;
     line-height: 1.6;
 }
 
 header #p1{
     font-size: 24px;
-    color: #333;
+    color: var(--text-color);
     text-align: center;
     padding: 20px 0px;
     font-style: italic;
     font-weight: 600;
-    background-color: #d0e7ff;
+    background-color: var(--header-title-bg);
     font-size: 30px;
     line-height: 2.5;
 }
 
 header #p2 {
     font-size: 20px;
-    color: #666;
+    color: var(--text-color);
     padding-left: 25px;
     padding-top: 10px;
     padding-bottom: 8px;
 }
 
 header {
-    background-color: #f8f8f8;
+    background-color: var(--header-bg);
     border-bottom: 2px solid #ccc;
 }
 
@@ -40,21 +158,21 @@ header {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #2372e1;
+    background-color: var(--main-bg);
     border: 1px solid #ddd;
-    color: #fff;
+    color: var(--text-color);
     border-radius: 8px;
     box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
 .main-content:hover {
-    background-color: #0753aa;
+    background-color: var(--main-hover-bg);
 }
 
 .todo-list h3 {
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     margin-bottom: 15px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-top: 10px;
@@ -73,7 +191,7 @@ input[type="text"],
     margin-left: 40px;
     width: 40%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -81,7 +199,7 @@ input[type="text"],
 }
 
 #taskInput:focus {
-    border-color: #007bff;
+    border-color: var(--input-border);
     outline: none;
 }
 
