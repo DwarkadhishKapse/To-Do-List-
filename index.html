@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <p id="p1">Welcome to your personal to-do list application!</p>
+        <p id="p2">Here you can manage your tasks efficiently.</p>
+    </header>
+
+    <main class="main-content">
+        <section class="todo-list">
+            <h3>Add your schedule here!</h3>
+            <input type="text" id="taskInput" placeholder="What do you have planned?" required style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <input type="date" id="dateInput" placeholder="Select a date" required style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <button id="addTaskButton">Add Task</button>
+
+            <h3>Tasks</h3>
+            <ul id="taskList">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
